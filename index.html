@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sahil | Virtual Business Card</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<main class="card" id="card">
+  <div class="image-wrapper">
+    <img src="assets/me.jpg" alt="Profile">
+  </div>
+
+  <h1>Sahil</h1>
+  <h3>Web Developer Intern</h3>
+
+  <p class="bio">
+    I build responsive, clean and user-focused web interfaces.
+  </p>
+
+  <div class="actions">
+    <a href="tel:+917028221624"><i class="fa-solid fa-phone"></i></a>
+    <a href="sahilshinde2402@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/sahil-shinde-a30948329?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/sahil3299" target="_blank"><i class="fa-brands fa-github"></i></a>
+  </div>
+
+  <button id="themeToggle">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+</main>
+<div class="qr-section">
+  <p>Scan to view my card</p>
+  <div id="qrcode"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  new QRCode(document.getElementById("qrcode"), {
+    text: "https://YOUR-LIVE-LINK-HERE",
+    width: 110,
+    height: 110,
+    colorDark: "#000000",
+    colorLight: "#ffffff"
+  });
+</script>
+
+
+<script src="script.js"></script>
+</body>
+</html>
